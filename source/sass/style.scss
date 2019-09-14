@@ -1,0 +1,16 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  background-color: #ffffff;
+  color: #000000;
+  width: 320px;
+  text-transform: uppercase;
+}
+@import "Utils";
+@import "mixin";
+@import "head";
+@import "benefits";
+@import "photo-cards";
+@import "footer";

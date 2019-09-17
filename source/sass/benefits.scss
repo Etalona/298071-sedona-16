@@ -5,15 +5,19 @@
   margin-top: -10px;
 }
 .benefit__triangle {
-  width: 320px;
   background-image: url("../img/bg-triangle.svg");
   background-repeat: no-repeat;
   background-position: top;
 }
 .benefit__wrapper {
   padding-top: 20px;
-  margin-bottom: 33px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0 auto;
   text-align: center;
+  width: 300px;
+
 }
 .benefit__headline {
   padding-top: 58px;
@@ -26,6 +30,7 @@
 .benefit__headline--trivial {
   margin-top: 7px;
   padding-top: 11px;
+
 }
 .benefit__description {
   text-transform: uppercase;
@@ -35,11 +40,30 @@
   padding-right: 15px;
   margin: 0;
 }
-.benefit__image {
+.benefit__image--first  {
+  background-image: url("../img/main-city-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   margin-top: 10px;
   margin-bottom: -8px;
-  width:320px;
-  height: 260px;
+  min-width: 320px;
+  min-height: 260px;
+}
+.benefit__image--second {
+  background-image: url("../img/photo-bridge-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 10px;
+  margin-bottom: -8px;
+  min-width: 280px;
+  min-height: 280px;
+}
+
+.benefit__image{
+  width: 100%;
+  height: 100%;
 }
 
 .recommendations__list {
@@ -48,12 +72,11 @@
   margin: 0;
   padding-left: 22px;
   padding-right: 20px;
-  padding-top: 10px;
+  padding-top: 25px;
   padding-bottom: 33px;
 }
 .recommendations__wrapper {
   margin-top: 8px;
-  padding-bottom: 8px;
   display: flex;
 }
 .recommendations__block {
@@ -71,6 +94,8 @@
 }
 .recommendations__color {
   fill: #81b3d2;
+  width: 40px;
+  height: 40px;
 }
 .benefits__list {
   list-style: none;
@@ -98,4 +123,101 @@
 .benefits__wrapper--list .benefits__description {
   margin-top: 13px;
   line-height: 21px;
+}
+
+
+@media  (min-width: 768px) {
+  .benefit__triangle {
+    background-image: none;
+  }
+  .benefit {
+    display: flex;
+
+  }
+  .benefit__headline {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .benefit__image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+  }
+  .benefit__image--first  {
+    background-image: url("../img/main-city-tablet@1x.jpg");
+    min-width: 512px;
+    min-height: 276px;
+  }
+  .benefit__image--second {
+    background-image: url("../img/photo-bridge-tablet@1x.jpg");
+    min-width: 324px;
+    min-height: 267px;
+  }
+  .benefit__wrapper--first {
+  padding-top: 0;
+  }
+  .benefit__wrapper--second {
+    padding-top: 40px;
+    order: 2;
+  }
+  .recommendations__list {
+    display: flex;
+    padding: 0;
+  }
+  .recommendations__list li:nth-child(2) {
+  order: 2;
+  }
+  .recommendations__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 42px;
+    padding-bottom: 55px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 33%;
+    align-items:center;
+  }
+  .recommendations__block {
+    text-align: center;
+    padding-right: 10px;
+  }
+  .recommendations__color {
+    width: 80px;
+    height: 80px;
+  }
+  .benefits__list {
+    display: flex;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+  }
+
+  .benefits__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   align-content: center;
+    border: none;
+  }
+  .benefits__headline {
+    max-width: 100px;
+  }
+
+  .benefits__description {
+    max-width: 290px;
+  }
+}
+@media  (min-width: 1200px)  {
+  .benefit__image--first  {
+    background-image: url("../img/main-city-desktop@1x.jpg");
+    min-width: 800px;
+    min-height: 260px;
+  }
+  .benefit__image--second {
+    background-image: url("../img/main-bridge-desktop@1x.jpg");
+    min-width: 800px;
+    min-height: 257px;
+  }
 }

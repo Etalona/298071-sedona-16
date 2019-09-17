@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -30,12 +31,9 @@
       </ul>
     </div>
   </nav>
-  <a class="page-header__logo">
-    <img class="page-header__logo-image"
-         src="/img/logo-sedona-mobile.svg"
-         width="101px" height="84px"
-         alt="Логотип Седона">
-  </a>
+  <div class="page-header__logo">
+    <div class="page-header__logo-image"></div>
+  </div>
 </header>
 <main class="page-main">
   <section class="main-top">
@@ -46,19 +44,19 @@
            alt="Добро пожаловать в Седону">
     </div>
     <div class="main-top__text-block">
-      <h1 class="main-top__headline">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
-      <p class="main-top__description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      <div class="main-top__text-block-wrapper">
+        <h1 class="main-top__headline">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+        <p class="main-top__description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      </div>
     </div>
   </section>
   <section class="benefit benefit__triangle">
-    <div class="benefit__wrapper">
+    <div class="benefit__wrapper benefit__wrapper--first">
       <h2 class="benefit__headline">Настоящий городок</h2>
       <span class="benefit__number">—  №1  —</span>
       <p class="benefit__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
     </div>
-    <img class="benefit__image"
-         src="/img/main-city-mobile@1x.jpg"
-         alt="Живописная улица">
+    <div class="benefit__image benefit__image--first "></div>
   </section>
   <section class="recommendations">
     <ul class="recommendations__list">
@@ -88,14 +86,12 @@
     </ul>
   </section>
   <section class="benefit">
-    <div class="benefit__wrapper">
+    <div class="benefit__wrapper benefit__wrapper--second">
       <h2 class="benefit__headline benefit__headline--trivial">Там есть Мост Дьявола</h2>
       <span class="benefit__number">—  №2  —</span>
       <p class="benefit__description">Да, по нему можно пройти! Если вы осмелитесь, конечно!</p>
     </div>
-    <img class="benefit__image"
-         src="/img/photo-bridge-mobile@1x.jpg"
-         alt="Мост Дьявола">
+    <div class="benefit__image benefit__image--second "></div>
   </section>
   <section class="benefits">
     <ul class="benefits__list">

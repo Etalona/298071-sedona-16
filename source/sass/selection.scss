@@ -1,0 +1,136 @@
+.selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 130px;
+}
+.selection__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 20px;
+  width: 280px;
+& h3 {
+  font-size: 21px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+& p {
+  text-align: center;
+}
+}
+.page-button {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 21px;
+  border: none;
+  @include contrast-color;
+  width: 100%;
+  color: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.range-controls {
+  position: relative;
+  height: 25px;
+  padding-top: 20px;
+  background-color: rgba(0,0,0,0.5);
+}
+.range-controls .scale {
+  height: 3px;
+  background: rgba(255,255,255,0.2);
+  width: 230px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.range-controls .toggle {
+  position: absolute;
+  top: 17px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.range-controls .toggle-min {
+  left: 65px;
+}
+.video {
+  width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: -60px;
+  & svg {
+    cursor: pointer;
+  }
+}
+.video-replay__wrapper {
+  width: 155px;
+  padding-left: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f2f2f2;
+}
+.video-sub__wrapper,
+.video-fullscreen__wrapper {
+  background-color: #f2f2f2;
+  flex-grow: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.video-replay,
+.video-sub path,
+.video-fullscreen polygon {
+  fill: #5c6870;
+}
+@media  (min-width: 768px) {
+  .selection__wrapper {
+  width: 460px;
+  }
+  .video {
+    flex-wrap: nowrap;
+  }
+  .range-controls {
+    height: 50px;
+    padding-top: 45px;
+  }
+  .range-controls .toggle {
+    top: 41px;
+  }
+  .video {
+  width: 650px;
+  }
+  .range-controls .scale {
+  width: 390px;
+  }
+  .video-replay__wrapper {
+  width: 50px;
+  order: 1;
+  }
+  .video-scale {
+    order: 2;
+  }
+  .video-sub__wrapper,
+  .video-fullscreen__wrapper {
+    order: 3;
+  }
+  .video-replay__wrapper,
+  .video-sub__wrapper,
+  .video-fullscreen__wrapper {
+    padding-top: 35px;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .video-replay,
+  .video-sub path,
+  .video-fullscreen polygon {
+    fill: #ffffff;
+  }
+}

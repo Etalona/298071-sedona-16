@@ -10,26 +10,26 @@
 </head>
 <body>
 <header class="page-header">
-  <nav class="main-nav">
-    <button class="main-nav__toggle visually-hidden" type="button">
-      Открыть меню
-    </button>
-    <div class="main__wrapper">
+  <nav class="main-nav main-nav--closed main-nav--nojs">
+    <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--first">
-          <a>Главная</a>
+        <li class="site-list__item">
+          <a href="index.html">Главная</a>
         </li>
-        <li class="site-list__item site-list__item--mid">
+        <li class="site-list__item">
           <a href="photo.html">Фото и видео</a>
         </li>
-        <li class="site-list__item site-list__item--mid">
-          <a href="form.html">Форма отзыва</a>
+        <li class="site-list__item">
+          <a>Форма отзыва</a>
         </li>
-        <li class="site-list__item site-list__item--last">
+        <li class="site-list__item">
           <a href="#">Html Academy</a>
         </li>
       </ul>
     </div>
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
   </nav>
   <a class="page-header__logo">
     <div class="page-header__logo-image"></div>
@@ -50,6 +50,85 @@
       </div>
     </div>
   </section>
+  <form class="form-area">
+    <fieldset class="form-area__block form-area__block--name">
+      <legend class="form-headline">Представьтесь:</legend>
+        <ul class="form-stylization">
+          <li class="form-area__block-profile">
+            <label for="name">Имя*:</label>
+            <input type="text" id="name" name="name" placeholder="Петр">
+          </li>
+          <li class="form-area__block-profile">
+            <label for="family-name">Фамилия*:</label>
+            <input type="text" id="family-name" name="family-name" placeholder="Иванов">
+          </li>
+          <li class="form-area__block-profile">
+            <label for="middle-name">Отчество:</label>
+            <input type="text" id="middle-name" name="middle-name" placeholder="Александрович">
+          </li>
+        </ul>
+    </fieldset>
+    <fieldset class="form-area__block form-area__block--contact">
+      <legend class="decoration-line">Контактная информация:</legend>
+      <ul class="form-stylization">
+        <li class="form-area__block-contact contact-tel">
+          <label for="phone"><span>Контактный </span>телефон*:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Введите телефон">
+        </li>
+        <li class="form-area__block-contact contact-email">
+          <label for="e-mail">Электронная&nbspпочта*:</label>
+          <input type="email" id="e-mail" name="e-mail" placeholder="Введите e-mail">
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="form-area__block form-area__block--impression">
+      <legend class="form-headline">Ваше общее впечатление:</legend>
+      <ul class="form-stylization form-stylization--input">
+        <li>
+          <input class="visually-hidden filter-input filter-input-radio" type="radio" id="plus-feedback" name="feedback" value="plus" checked>
+          <label for="plus-feedback">Скорее положительное</label>
+        </li>
+        <li>
+          <input class="visually-hidden filter-input filter-input-radio" type="radio" id="minus-feedback" name="feedback" value="minus">
+          <label for="minus-feedback">Скорее отрицательное</label>
+        </li>
+        <li>
+          <input class="visually-hidden filter-input filter-input-radio" type="radio" id="unknown-feedback" name="feedback" value="unknown">
+          <label for="unknown-feedback">Затрудняюсь ответить</label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="form-area__block form-area__block--showplace">
+      <legend class="decoration-line">Посещенные <br>достопримечательности:</legend>
+      <ul class="form-stylization form-stylization--input form-stylization--checkbox">
+        <li>
+          <input class="visually-hidden checkbox__input" type="checkbox" id="bridge" name="bridge" checked>
+          <label for="bridge">Мост Дьявола</label>
+        </li>
+        <li>
+          <input class="visually-hidden checkbox__input" type="checkbox" id="mount" name="mount" checked>
+          <label for="mount">Гора-Колокол</label>
+        </li>
+        <li>
+          <input class="visually-hidden checkbox__input" type="checkbox" id="park" name="park" checked>
+          <label for="park">Слайд-парк</label>
+        </li>
+        <li>
+          <input class="visually-hidden checkbox__input" type="checkbox" id="rocks" name="rocks">
+          <label for="rocks">Красные скалы</label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="form-area__block form-area__block--review">
+      <legend class="decoration-line">Опишите свои эмоции:</legend>
+      <textarea rows="7"  name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+      <div>
+      <button type="submit" class="page-button">Отправить отзыв</button>
+      <span class="form-area__footnote">* — Обязательные поля</span>
+      </div>
+    </fieldset>
+  </form>
+
 </main>
 <footer class="page-footer">
   <div class="page-footer__tag">
@@ -81,5 +160,21 @@
       HTML Academy</a>
   </div>
 </footer>
+<script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+            navMain.classList.remove('main-nav--closed');
+            navMain.classList.add('main-nav--opened');
+        } else {
+            navMain.classList.add('main-nav--closed');
+            navMain.classList.remove('main-nav--opened');
+        }
+    });
+</script>
 </body>
 </html>

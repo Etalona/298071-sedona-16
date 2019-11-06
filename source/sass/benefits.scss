@@ -65,7 +65,6 @@
   width: 100%;
   height: 100%;
 }
-
 .recommendations__list {
   list-style: none;
   padding: 0;
@@ -78,6 +77,9 @@
 .recommendations__wrapper {
   margin-top: 8px;
   display: flex;
+justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .recommendations__block {
   padding-left: 10px;
@@ -91,6 +93,7 @@
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 0;
+  max-width: 215px;
 }
 .recommendations__color {
   fill: #81b3d2;
@@ -112,6 +115,7 @@
   margin-left: 20px;
   margin-right: 20px;
   border-top: 1px solid #d6d6d6;
+
 }
 .benefits__wrapper--list:first-child {
   border-top: none;
@@ -123,9 +127,10 @@
 .benefits__wrapper--list .benefits__description {
   margin-top: 13px;
   line-height: 21px;
+  max-width: 245px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-
 @media  (min-width: 768px) {
   .benefit__triangle {
     background-image: none;
@@ -185,6 +190,9 @@
   .recommendations__color {
     width: 80px;
     height: 80px;
+  }
+  .recommendations__description {
+    width: 160px;
   }
   .benefits__list {
     display: flex;

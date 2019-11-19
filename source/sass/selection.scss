@@ -33,6 +33,13 @@
   margin-top: 15px;
   margin-bottom: 15px;
   cursor: pointer;
+  &:hover {
+    background-color: #669ec0;
+  }
+  &:active {
+    background-color: #5496bd;
+    color: #94b9d2;
+  }
 }
 
 .range-controls {
@@ -132,5 +139,16 @@
   .video-sub path,
   .video-fullscreen polygon {
     fill: #ffffff;
+  }
+}
+@media  (min-width: 1200px) {
+  .selection__wrapper {
+    width: 800px;
+  }
+  .video {
+    width: 800px;
+  }
+  .range-controls .scale {
+    width: 540px;
   }
 }

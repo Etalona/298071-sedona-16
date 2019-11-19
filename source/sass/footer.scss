@@ -34,6 +34,15 @@
   height: 46px;
   color: #ffffff;
   @include contrast-color();
+  &:hover {
+  background-color: #669ec0;
+  }
+  &:active {
+    background-color: #5496bd;
+  }
+}
+.social__link:active .social__icon {
+  opacity: 0.3;
 }
 .page-footer__social {
   padding-bottom: 40px;
@@ -49,7 +58,18 @@
   display: flex;
   justify-content: center;
 }
-
+.copyright__logo {
+  &:hover {
+    path {
+    fill: #81b3d2;
+    }
+  }
+  &:active{
+    path {
+      fill: #b2b2b2;
+    }
+  }
+}
 @media  (min-width: 768px) {
   .page-footer {
     display: flex;

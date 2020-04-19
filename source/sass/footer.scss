@@ -41,6 +41,9 @@
     background-color: #5496bd;
   }
 }
+.social__link svg {
+  fill: #ffffff;
+}
 .social__link:active .social__icon {
   opacity: 0.3;
 }
